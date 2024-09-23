@@ -12,7 +12,7 @@ function setup() {
 }
 
 function draw() {
-  background("BLUE");
+  background("lightblue");
   let idade = campoIdade.value();
   let gostaDeFantasia = campoFantasia.checked();
   let gostaDeAventura = campoAventura.checked();
@@ -27,27 +27,27 @@ function draw() {
 function geraRecomendacao(idade, gostaDeFantasia, gostaDeAventura) {
   if (idade >= 10) {
     if (idade >= 14) {
-      return "O menino que descobriu o vento";
+      return "coraline";
     } else {
       if (idade >= 1) {
         if(gostaDeFantasia || gostaDeAventura) {
-          return "Homem aranha: no aranhaverso";          
+          return "gente grande";          
         } else{
-         return "Ladrões de bicicleta";
+         return "forest gump";
         }
       } else {
         if (gostaDeFantasia) {
-          return "As aventuras de pi";
+          return "O castelo animado";
         } else {
-          return "Depois da chuva";
+          return "Crepúsculo";
         }
       }
     }
   } else {
     if (gostaDeFantasia) {
-      return "A viagem de chihiro";
+      return "Harry potter e a pedra filosofal";
     } else {
-      return "O feitiço do tempo";
+      return "Beetlejuice";
     }
   }
 }
